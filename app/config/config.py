@@ -1,13 +1,17 @@
-# archivo de configuración del sistema.
+# Configuración del sistema
 
-# versión del TP.
-VERSION = 'Trabajo práctico - 2do cuatrimestre del 2024.'
+# Versión del trabajo práctico
+VERSION = "Trabajo práctico - 2do cuatrimestre del 2024."
+
+
+BASE_API_URL = "https://rickandmortyapi.com/api/character"
 
 # Rick & Morty REST API para capturar imágenes de la galería
-DEFAULT_PAGE = '1'
-DEFAULT_REST_API_URL = 'https://rickandmortyapi.com/api/character?page=' + DEFAULT_PAGE
-
+DEFAULT_PAGE = 1  
 
 # Palabra buscada por defecto.
-DEFAULT_NAME_QUERY_PARAM = '&name='
-DEFAULT_REST_API_SEARCH = DEFAULT_REST_API_URL + DEFAULT_NAME_QUERY_PARAM # https://rickandmortyapi.com/api/character?page=1&name=?
+DEFAULT_NAME_QUERY_PARAM = "name"
+
+# URLs 
+DEFAULT_REST_API_URL = f"{BASE_API_URL}?page={DEFAULT_PAGE}"
+DEFAULT_REST_API_SEARCH = f"{BASE_API_URL}?page={DEFAULT_PAGE}&{DEFAULT_NAME_QUERY_PARAM}="
